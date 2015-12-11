@@ -12,5 +12,10 @@ There are a number of ways to construct the two agents on one's team; I chose to
 
 The offensive reflex agent's primary concerns are locating food pellets and avoiding ghosts looking for it. Meanwhile, the defensive reflex agent's single concern is eliminating pacman agents that cross over into its territory. Therefore, I deemed these three problems the most important to address.
 
-# Search algorithms
 The three problems discussed above can be solved by utilizing distance computations and a variety of search algorithms. First, the offensive reflex agent's task of locating the nearest food pellets is easily solved by looping through the list of pellets still in the maze, computing the Manhattan distance between the pellet and the agent, and returning the minimum Manhattan distance from the list. The other two tasks (the offensive reflex agent avoiding ghosts and the defensive reflex agent catching ghosts) is significantly more complex, because unlike pellets in the maze, the other team's agents are moving with each time step. 
+
+# The A* search algorithm
+Though I could have used any pathfinding algorithm in my implementation, I chose to use the A* algorithm because it fit the project requirement that we implement something we had not yet done in a previous project. But beyond this deciding factor, the A* algorithm is a good choice because it is quite flexible and performs significantly better than other commonly-used search algorithms like Depth First Search or Breadth First Search. 
+
+As shown in the picture below, in most cases A* finds the shortest path between the start and goal node, even if there is an obstacle in the way. Obstacles are an important to consider, because the agents must navigate through the walled maze.
+![test](http://theory.stanford.edu/~amitp/game-programming/a-star/a-star-trap.png)
