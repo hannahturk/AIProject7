@@ -8,4 +8,9 @@ This project is a Capture the Flag contest between two teams in a Pacman maze. T
 ![test](https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/sp15/contest2/capture_the_flag2.png)
 
 # Modeling the problems in the game
-There are a number of ways to construct the two agents on one's team; I chose to assign one agent to offense and one to defense. Thus, the offense agent's goal as Pacman is to cross over to enemy territory and eat pellets, and the defensive agent's goal as a ghost is to stay on its home side and prevent the other team's agent(s) from eating pellets.
+There are a number of ways to construct the two agents on one's team; I chose to assign one reflex agent to offense and one to defense. Thus, the offensive reflex agent's goal as Pacman is to cross over to enemy territory and eat pellets, and the defensive reflex agent's goal as a ghost is to stay on its home side and prevent the other team's agent(s) from eating pellets.
+
+The offensive reflex agent's primary concerns are locating food pellets and avoiding ghosts looking for it. Meanwhile, the defensive reflex agent's single concern is eliminating pacman agents that cross over into its territory. Therefore, I deemed these three problems the most important to address.
+
+# Search algorithms
+The three problems discussed above can be solved by utilizing distance computations and a variety of search algorithms. 
