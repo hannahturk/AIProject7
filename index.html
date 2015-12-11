@@ -38,10 +38,15 @@
 
 <p>The offensive reflex agent's primary concerns are locating food pellets and avoiding ghosts looking for it. Meanwhile, the defensive reflex agent's single concern is eliminating pacman agents that cross over into its territory. Therefore, I deemed these three problems the most important to address.</p>
 
-<h1>
-<a id="search-algorithms" class="anchor" href="#search-algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Search algorithms</h1>
-
 <p>The three problems discussed above can be solved by utilizing distance computations and a variety of search algorithms. First, the offensive reflex agent's task of locating the nearest food pellets is easily solved by looping through the list of pellets still in the maze, computing the Manhattan distance between the pellet and the agent, and returning the minimum Manhattan distance from the list. The other two tasks (the offensive reflex agent avoiding ghosts and the defensive reflex agent catching ghosts) is significantly more complex, because unlike pellets in the maze, the other team's agents are moving with each time step. </p>
+
+<h1>
+<a id="the-a-search-algorithm" class="anchor" href="#the-a-search-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>The A* search algorithm</h1>
+
+<p>Though I could have used any pathfinding algorithm in my implementation, I chose to use the A* algorithm because it fit the project requirement that we implement something we had not yet done in a previous project. But beyond this deciding factor, the A* algorithm is a good choice because it is quite flexible and performs significantly better than other commonly-used search algorithms like Depth First Search or Breadth First Search. </p>
+
+<p>As shown in the picture below, in most cases A* finds the shortest path between the start and goal node, even if there is an obstacle in the way. Obstacles are an important to consider, because the agents must navigate through the walled maze.
+<img src="http://theory.stanford.edu/%7Eamitp/game-programming/a-star/a-star-trap.png" alt="test"></p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/hannahturk/AIProject7">AI Project 7</a> is maintained by <a href="https://github.com/hannahturk">hannahturk</a>.</span>
