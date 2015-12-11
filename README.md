@@ -18,4 +18,16 @@ The three problems discussed above can be solved by utilizing distance computati
 Though I could have used any pathfinding algorithm in my implementation, I chose to use the A* algorithm because it fit the project requirement that we implement something we had not yet done in a previous project. But beyond this deciding factor, the A* algorithm is a good choice because it is quite flexible and performs significantly better than other commonly-used search algorithms like Depth First Search or Breadth First Search. 
 
 As shown in the picture below, in most cases A* finds the shortest path between the start and goal node, even if there is an obstacle in the way. Obstacles are an important to consider, because the agents must navigate through the walled maze.
+
 ![test](http://theory.stanford.edu/~amitp/game-programming/a-star/a-star-trap.png)
+
+Here, the heuristic I used in the A* computation was the Manhattan (cityblock) distance between the agent and the enemy agent I was tracking. However, the way I utilized the output from A* for each agent was different.
+
+# The offensive reflex agent
+
+# The defensive reflex agent
+
+
+
+[Link to the first image I used]((https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/sp15/contest2/capture_the_flag2.png)
+[Link to the second image I used](http://theory.stanford.edu/~amitp/game-programming/a-star/a-star-trap.png)
