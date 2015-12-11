@@ -13,4 +13,4 @@ There are a number of ways to construct the two agents on one's team; I chose to
 The offensive reflex agent's primary concerns are locating food pellets and avoiding ghosts looking for it. Meanwhile, the defensive reflex agent's single concern is eliminating pacman agents that cross over into its territory. Therefore, I deemed these three problems the most important to address.
 
 # Search algorithms
-The three problems discussed above can be solved by utilizing distance computations and a variety of search algorithms. 
+The three problems discussed above can be solved by utilizing distance computations and a variety of search algorithms. First, the offensive reflex agent's task of locating the nearest food pellets is easily solved by looping through the list of pellets still in the maze, computing the Manhattan distance between the pellet and the agent, and returning the minimum Manhattan distance from the list. The other two tasks (the offensive reflex agent avoiding ghosts and the defensive reflex agent catching ghosts) is significantly more complex, because unlike pellets in the maze, the other team's agents are moving with each time step. 
