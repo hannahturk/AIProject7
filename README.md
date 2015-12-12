@@ -24,14 +24,15 @@ As shown in the picture below, in most cases A* finds the shortest path between 
 Here, the heuristic I used in the A* computation was the Manhattan (cityblock) distance between the agent and the enemy agent I was tracking. However, the way I utilized the output from A* for each agent was different.
 
 # The offensive reflex agent
+On offense, Pacman's goal is to avoid ghosts while eating pellets. For the sake of simplifying the problem, I did not add any code to address how Pacman chooses to eat the pellets. Instead, I focused on a way to avoid ghosts. I first made the assumption that the enemy ghosts would be using pathfinding algorithms similar to A* to find my offensive agent. I implemented A* and took those results, and programmed my offensive agent to make a move in the opposite direction that the result of A* suggested at every time step. Thus, the offensive reflex agent's main functionality is to predict the ghost's behavior and avoid it.
 
 # The defensive reflex agent
+On defense, a ghost's goal is to find the Pacman agent and run into it as soon as possible. Thus, this called for the more obvious use of the A* algorithm: finding the shortest path to the enemy agent and taking the suggested step at each time step.  
 
 
 
-#
-
-Note: I had trouble formatting the recorded audio with my slides (the pictures on this page), so I posted the narration script alongside the pictures instead.
+# End Notes
+I had trouble formatting the recorded audio with my slides (the pictures on this page), so I posted the narration script alongside the pictures instead.
 
 [Link to the first image I used](https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/sp15/contest2/capture_the_flag2.png)
 
