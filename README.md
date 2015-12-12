@@ -34,4 +34,5 @@ Here, the heuristic I used in the A* computation was the Manhattan (cityblock) d
 Note: I had trouble formatting the recorded audio with my slides (the pictures on this page), so I posted the narration script alongside the pictures instead.
 
 [Link to the first image I used](https://s3-us-west-2.amazonaws.com/cs188websitecontent/projects/sp15/contest2/capture_the_flag2.png)
+
 [Link to the second image I used](http://theory.stanford.edu/~amitp/game-programming/a-star/a-star-trap.png)
